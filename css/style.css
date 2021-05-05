@@ -14,6 +14,9 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
+  background-color: #0f151c;
+  width: 95%;
+  margin: 0 auto;
 }
 
 h1 {
@@ -31,7 +34,72 @@ h4 {
 
 a {
   text-decoration: none;
+  color: #ced4da;
+}
+
+.navigation {
+  width: 100%;
+  height: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation .logo-container {
+  width: 30%;
+}
+.navigation .logo-container .logo {
+  display: inline-block;
+  font-weight: 300;
+  color: #f8f9fa;
+}
+.navigation .logo-container .logo:hover {
+  cursor: pointer;
+}
+.navigation .nav-links {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.navigation .nav-links a {
+  font-weight: 300;
+}
+.navigation .nav-links .im {
+  font-size: 1.1rem;
+}
+
+#header {
+  min-height: 10vh;
+  width: 95%;
+  margin: 0 auto;
+  padding: 2rem 5rem;
+}
+
+.apod {
+  width: 100%;
+  height: 90vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   color: white;
+  font-size: 2rem;
+}
+.apod__image-container {
+  width: 45%;
+  height: 40rem;
+  border: 1px solid #adb5bd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.apod__text {
+  width: 45%;
+  height: 40rem;
+  border: 1px solid #adb5bd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -6,7 +6,10 @@
 @import "./base/_normalize";
 
 // importing components
+@import "./components/_navigation";
 
 // importing layouts
+@import "./layout/header";
 
 // importing pages
+@import "./pages/_homepage";

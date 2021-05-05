@@ -1,0 +1,28 @@
+.apod {
+	width: 100%;
+	height: 90vh;
+	margin: auto;
+	@include flex-space-evenly;
+
+	// temporary template styles
+	color: white;
+	font-size: 2rem;
+
+	&__image-container {
+		width: 45%;
+		height: 40rem;
+
+		border: 1px solid $gray-darker;
+
+		@include flex-center;
+	}
+
+	&__text {
+		// temporary template styles
+		width: 45%;
+		height: 40rem;
+
+		border: 1px solid $gray-darker;
+		@include flex-center;
+	}
+}
