@@ -1,28 +1,42 @@
 .apod {
+	@include flex-space-evenly;
+
 	width: 100%;
 	height: 90vh;
 	margin: auto;
-	@include flex-space-evenly;
+	color: $gray-dark;
 
-	// temporary template styles
-	color: white;
-	font-size: 2rem;
-
-	&__image-container {
-		width: 45%;
-		height: 40rem;
-
-		border: 1px solid $gray-darker;
-
+	&__container {
 		@include flex-center;
+
+		overflow: hidden;
+		background-position: center;
+		background-size: cover;
+
+		&--media {
+			width: 100%;
+			height: 100%;
+			border-radius: 5px;
+		}
 	}
 
 	&__text {
-		// temporary template styles
+		@include flex-v-space-evenly;
+		text-align: left;
+		padding: 2rem;
+
+		h3 {
+			width: 100%;
+			font-size: 3.6rem;
+			font-weight: 400;
+		}
+	}
+
+	&__container,
+	&__text {
 		width: 45%;
 		height: 40rem;
-
-		border: 1px solid $gray-darker;
-		@include flex-center;
+		overflow: hidden;
+		box-shadow: 0 8px 8px rgba($black, 0.2);
 	}
 }

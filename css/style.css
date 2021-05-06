@@ -15,8 +15,13 @@ body {
   font-size: 1.5rem;
   font-weight: 400;
   background-color: #0f151c;
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 h1 {
@@ -39,7 +44,7 @@ a {
 
 .navigation {
   width: 100%;
-  height: 100;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,36 +75,92 @@ a {
 
 #header {
   min-height: 10vh;
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
   padding: 2rem 5rem;
 }
 
-.apod {
+.content-loader {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 90vh;
+  height: 100%;
+}
+.content-loader-img {
+  width: 90%;
+  height: 50%;
+}
+.content-loader-text {
+  width: 90%;
+  height: 20%;
+}
+.content-loader-img, .content-loader-text {
+  position: relative;
+  overflow: hidden;
   margin: auto;
+  background-color: #5d6974;
+}
+.content-loader-img::before, .content-loader-text::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #5d6974 0%, #adb5bd 30%, #5d6974 100%);
+  transform: translateX(-100%);
+  animation: slideIn 1.2s cubic-bezier(0.25, 0.81, 0.36, 1) infinite;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(200%);
+  }
+}
+.apod {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  color: white;
-  font-size: 2rem;
+  width: 100%;
+  height: 90vh;
+  margin: auto;
+  color: #ced4da;
 }
-.apod__image-container {
-  width: 45%;
-  height: 40rem;
-  border: 1px solid #adb5bd;
+.apod__container {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+}
+.apod__container--media {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
 }
 .apod__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: left;
+  padding: 2rem;
+}
+.apod__text h3 {
+  width: 100%;
+  font-size: 3.6rem;
+  font-weight: 400;
+}
+.apod__container, .apod__text {
   width: 45%;
   height: 40rem;
-  border: 1px solid #adb5bd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
 }
 
 /*# sourceMappingURL=style.css.map */

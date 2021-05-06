@@ -1,0 +1,55 @@
+.content-loader {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+
+	&-img {
+		width: 90%;
+		height: 50%;
+	}
+
+	&-text {
+		width: 90%;
+		height: 20%;
+	}
+
+	&-img,
+	&-text {
+		position: relative;
+		overflow: hidden;
+		margin: auto;
+		background-color: darken($gray-darker, 30%);
+
+		&::before {
+			content: "";
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+
+			background: linear-gradient(
+				to right,
+				darken($gray-darker, 30%) 0%,
+				rgba($gray-darker, 1) 30%,
+				darken($gray-darker, 30%) 100%
+			);
+
+			transform: translateX(-100%);
+			animation: slideIn 1.2s cubic-bezier(0.25, 0.81, 0.36, 1) infinite;
+		}
+	}
+}
+
+// content loader animation
+@keyframes slideIn {
+	from {
+		transform: translateX(-100%);
+	}
+
+	to {
+		transform: translateX(200%);
+	}
+}

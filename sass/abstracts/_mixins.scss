@@ -9,3 +9,10 @@
 	align-items: center;
 	justify-content: space-evenly;
 }
+
+@mixin flex-v-space-evenly {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}

@@ -17,8 +17,13 @@ body {
 
 	background-color: $color-primary;
 
-	width: 95%;
+	width: 100%;
 	margin: 0 auto;
+}
+
+p {
+	font-size: 1.5rem;
+	font-weight: 300;
 }
 
 h1 {
