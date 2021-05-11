@@ -23,6 +23,8 @@
 	.nav-links {
 		width: 60%;
 
+		align-self: stretch;
+
 		display: flex;
 		align-items: center;
 		justify-content: space-evenly;
@@ -33,6 +35,14 @@
 
 		.im {
 			font-size: 1.1rem;
+			margin-left: 0.5rem;
+			margin-top: 0.5rem;
 		}
+	}
+
+	.nav-link {
+		position: relative;
+		width: 100%;
+		height: 100%;
 	}
 }

@@ -1,0 +1,49 @@
+.dropdown {
+	@include flex-center;
+	width: 100%;
+	height: 100%;
+
+	& + a {
+		@include flex-center;
+	}
+
+	&:hover {
+		background-color: lighten($color-primary, 5%);
+	}
+
+	&:hover &__content {
+		opacity: 1;
+		pointer-events: initial;
+		transform: translateY(0%);
+	}
+
+	&__content {
+		@include flex-v-space-evenly;
+		// absolute positioning
+		position: absolute;
+		width: 100%;
+		top: 100%;
+		left: 0;
+		opacity: 0;
+		pointer-events: none;
+		background-color: lighten($color-primary, 5%);
+		box-shadow: 0.3rem 0.4rem 0.6rem black;
+		overflow-x: hidden;
+
+		// transition effects
+		transform: translateY(15%);
+		transition: all 0.2s ease-in;
+
+		&--link {
+			align-self: stretch;
+			font-size: 1.4rem;
+			padding: 3px 10px;
+			width: 100%;
+			height: 100%;
+
+			&:hover {
+				background-color: lighten($color-primary, 10%);
+			}
+		}
+	}
+}
