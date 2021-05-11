@@ -1,0 +1,32 @@
+.btn-container {
+	@include flex-center;
+	margin: 5rem auto;
+	padding: 1rem 5rem;
+}
+
+.btn {
+	display: inline-block;
+	text-align: center;
+	padding: 1rem 2rem;
+	border: 1px solid $gray;
+
+	// transition
+	transition: all 0.3s ease-in;
+
+	span {
+		transition: all 0.3s ease-in;
+	}
+
+	&:hover {
+		background-color: $gray;
+		color: $color-primary;
+		transform: scale(1.05);
+
+		box-shadow: inset 0rem 0rem 1rem rgba($gray, 1),
+			0rem 0.5rem 1.5rem rgba($gray, 0.6);
+
+		span {
+			margin-left: 1rem;
+		}
+	}
+}

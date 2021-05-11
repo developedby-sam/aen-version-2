@@ -8,10 +8,12 @@
 // importing components
 @import "./components/_navigation";
 @import "./components/_dropdown";
+@import "./components/_buttons";
 
 // importing layouts
 @import "./layout/header";
 @import "./layout/content-loader";
+@import "./layout/_rae";
 
 // importing pages
 @import "./pages/_homepage";
