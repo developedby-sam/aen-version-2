@@ -8,11 +8,20 @@
 	display: inline-block;
 	text-align: center;
 	padding: 1rem 2rem;
+	border-radius: 0px;
 	border: 1px solid $gray;
+	backface-visibility: none;
 
 	// transition
-	transition: all 0.3s ease-in;
+	transition: all 0.2s ease-in;
 
+	&:hover {
+		transform: scale(1.05);
+		border-radius: 3px;
+	}
+}
+
+.btn-primary {
 	span {
 		transition: all 0.3s ease-in;
 	}
@@ -20,7 +29,6 @@
 	&:hover {
 		background-color: $gray;
 		color: $color-primary;
-		transform: scale(1.05);
 
 		box-shadow: inset 0rem 0rem 1rem rgba($gray, 1),
 			0rem 0.5rem 1.5rem rgba($gray, 0.6);

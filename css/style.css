@@ -141,19 +141,25 @@ a {
   display: inline-block;
   text-align: center;
   padding: 1rem 2rem;
+  border-radius: 0px;
   border: 1px solid #f8f9fa;
-  transition: all 0.3s ease-in;
-}
-.btn span {
-  transition: all 0.3s ease-in;
+  backface-visibility: none;
+  transition: all 0.2s ease-in;
 }
 .btn:hover {
+  transform: scale(1.05);
+  border-radius: 3px;
+}
+
+.btn-primary span {
+  transition: all 0.3s ease-in;
+}
+.btn-primary:hover {
   background-color: #f8f9fa;
   color: #0f151c;
-  transform: scale(1.05);
   box-shadow: inset 0rem 0rem 1rem #f8f9fa, 0rem 0.5rem 1.5rem rgba(248, 249, 250, 0.6);
 }
-.btn:hover span {
+.btn-primary:hover span {
   margin-left: 1rem;
 }
 
