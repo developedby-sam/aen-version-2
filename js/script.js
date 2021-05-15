@@ -19,7 +19,6 @@ async function fetchApi(url) {
 }
 
 function generatePicture(data) {
-	console.log(data);
 	if (data.media_type === "image") {
 		apodContainer.innerHTML = `
 			<img class='apod__container--media' src=${data.url} alt=${data.title}></img>
@@ -42,10 +41,11 @@ function generatePicture(data) {
 			</iframe>
 			`;
 		apodText.innerHTML = `
-				<h3 class="APOD__desc--title"> Astronomy Picture of the Day </h3>
-				<p class="APOD__desc--image-desc">${data.explanation}</p>
+				<h3> Astronomy Picture of the Day </h3>
+				<p>${data.explanation}</p>
 			`;
 	}
+	apodText.style.height = "auto";
 }
 
 async function loadAPOD() {

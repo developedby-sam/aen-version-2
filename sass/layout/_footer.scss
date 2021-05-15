@@ -1,0 +1,21 @@
+.footer {
+  margin-top: 5rem;
+  padding: 2rem 0rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__credits {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &__copyright,
+  &__credits {
+    width: 45%;
+    border-top: 0.2rem solid gray;
+    padding: 2rem 1rem;
+  }
+}

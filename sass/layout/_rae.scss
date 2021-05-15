@@ -1,15 +1,42 @@
 .rae {
 	//
+	margin-top: 8rem;
 
 	&__title {
 		//
 	}
 
 	&__container {
-		//
+		@include flex-space-evenly;
+		flex-wrap: wrap;
+		width: 90%;
+		margin: 8rem auto;
 	}
 
 	&__item {
-		//
+		@include flex-center-vertical;
+		padding: 4rem 2rem;
+		flex: 1 1 40rem;
+
+		p {
+			padding-top: 1rem;
+		}
+
+		.im {
+			font-size: 4.8rem;
+			cursor: pointer;
+		}
+
+		&--sci-debate,
+		&--blog-posts {
+			border-left: 0.1rem solid white;
+			border-right: 0.1rem solid white;
+		}
+
+		&--sci-talks,
+		&--sci-debate,
+		&--discussion {
+			border-bottom: 0.1rem solid white;
+		}
 	}
 }

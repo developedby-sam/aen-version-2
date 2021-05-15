@@ -1,0 +1,44 @@
+.aen-at-glance {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &__heading {
+    width: 100%;
+  }
+
+  &__desc {
+    width: 60%;
+    margin-top: 1rem;
+    padding: 4rem 0rem;
+    padding: 2rem 1rem;
+    font-weight: 300;
+  }
+
+  &__numbers {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 4rem 0rem;
+
+    &--benefic,
+    &--reach,
+    &--members {
+      margin: 2rem 0 0 0;
+
+      h3 {
+        font-size: 6rem;
+      }
+
+      p {
+        font-size: 1.8rem;
+        font-weight: 300;
+        padding: 1rem 0rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.collaborators {
+  width: 100%;
+  @include flex-v-space-evenly;
+
+  &__heading {
+    width: 100%;
+    padding: 1rem;
+    margin: 10rem 0rem;
+  }
+
+  &__container {
+    width: 100%;
+    background: #fff;
+    padding: 5rem 0rem;
+
+    @include flex-space-evenly;
+    overflow: hidden;
+
+    &--box {
+      width: 80%;
+      background: #fff;
+      padding: 2rem 0rem;
+
+      @include flex-space-between;
+
+      img {
+        width: 15rem;
+        height: auto;
+        margin-right: 4rem;
+      }
+    }
+  }
+
+  &__social {
+    @include flex-v-space-evenly;
+
+    width: 100%;
+    padding: 2rem 0rem;
+
+    &--heading {
+      font-size: 2.4rem;
+      font-weight: 300;
+      margin: 3rem 0rem;
+    }
+
+    &--container {
+      width: 60%;
+      @include flex-space-evenly;
+    }
+  }
+
+  &__social-media {
+    padding: 2rem 0rem;
+    .im {
+      font-size: 4.8rem;
+    }
+  }
+}
+
+.collab-animation {
+  transform: translateX(-10%);
+  animation: collab-anim 10s linear 5s infinite alternate;
+}
+
+@keyframes collab-anim {
+  from {
+    transform: translateX(-10%);
+  }
+  to {
+    transform: translateX(-70%);
+  }
+}

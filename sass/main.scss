@@ -1,6 +1,7 @@
 // importing abstracts
 @import "./abstracts/_variables";
 @import "./abstracts/_mixins";
+@import "./abstracts/_typography";
 
 // importing base styles
 @import "./base/_normalize";
@@ -14,6 +15,9 @@
 @import "./layout/header";
 @import "./layout/content-loader";
 @import "./layout/_rae";
+@import "./layout/_aen_at_glance";
+@import "./layout/_colaborators";
+@import "./layout/_footer";
 
 // importing pages
 @import "./pages/_homepage";
