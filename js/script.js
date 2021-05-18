@@ -103,6 +103,18 @@ sections.forEach((section) => {
 		.addTo(controller);
 });
 
+// HEADER ANIMATION
+// const apod = document.querySelector(".apod");
+// const headerTimeline = gsap.timeline({
+// 	defaults: { duration: 2, ease: "expo.inOut" },
+// });
+
+// headerTimeline.fromTo(
+// 	apod,
+// 	{ opacity: "0", scale: "0" },
+// 	{ opacity: "1", scale: "1" }
+// );
+
 // SCROLL MAGIC CODES
 const numbersScene = new ScrollMagic.Scene({
 	triggerElement: ".aen-at-glance__numbers",

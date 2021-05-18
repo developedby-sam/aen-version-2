@@ -1,6 +1,5 @@
 .apod {
 	@include flex-space-evenly;
-	// align-items: flex-start;
 
 	width: 100%;
 	height: 90vh;
@@ -40,5 +39,19 @@
 		width: 45%;
 		overflow: hidden;
 		box-shadow: 0 8px 8px rgba($black, 0.2);
+	}
+
+	animation: popUp 1.5s cubic-bezier(0.56, 0.01, 0.47, 1.01);
+}
+
+@keyframes popUp {
+	from {
+		opacity: 0;
+		transform: scale(0);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale(1);
 	}
 }
