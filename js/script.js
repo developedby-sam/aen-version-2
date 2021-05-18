@@ -1,6 +1,12 @@
-import { youtube_parser, numberIncreamentAnimation } from "./utility.js";
+import {
+	youtube_parser,
+	numberIncreamentAnimation,
+	setLocalStorage,
+	getLocalStorage,
+} from "./utility.js";
 
 const controller = new ScrollMagic.Controller();
+Scrollbar.initAll();
 
 // Implementin Astronomy Picture of the Day from NASA's API
 const auth = "T7Z6BYNlOOApYYAp4PD2ERaw1h6pCtuzt8lmI7dO";
@@ -17,6 +23,11 @@ async function fetchApi(url) {
 	});
 
 	const data = await dataFetch.json();
+	setLocalStorage("data", {
+		url: data.url,
+		explanation: data.explanation,
+		media_type: data.media_type,
+	});
 	return data;
 }
 
@@ -51,9 +62,9 @@ function generatePicture(data) {
 }
 
 async function loadAPOD() {
-	const data = await fetchApi(
-		`https://api.nasa.gov/planetary/apod?api_key=${auth}`
-	);
+	let data = getLocalStorage("data");
+	console.log(data);
+	data = await fetchApi(`https://api.nasa.gov/planetary/apod?api_key=${auth}`);
 	generatePicture(data);
 }
 
@@ -70,22 +81,33 @@ function startNumberAnimation() {
 	numberIncreamentAnimation(members, 0, 150, 1, 3000);
 }
 
+// IMPLEMENTING SECTION-REVEALING ANIMTION
+const sections = document.querySelectorAll(".section");
+let revealScene;
+sections.forEach((section) => {
+	const revealTimeline = gsap.timeline({
+		defaults: { duration: 1, ease: "expo.out" },
+	});
+
+	revealTimeline.fromTo(
+		section,
+		{ opacity: "0", transform: "translateY(8rem)" },
+		{ opacity: "1", transform: "translateY(0rem)" }
+	);
+	revealScene = new ScrollMagic.Scene({
+		triggerElement: section,
+		triggerHook: 0.9,
+		reverse: false,
+	})
+		.setTween(revealTimeline)
+		.addTo(controller);
+});
+
 // SCROLL MAGIC CODES
 const numbersScene = new ScrollMagic.Scene({
 	triggerElement: ".aen-at-glance__numbers",
 	triggerHook: 0.8,
 	reverse: false,
 })
-	// .addIndicators({ colorStart: "white", colorTrigger: "white" })
 	.on("start", startNumberAnimation)
 	.addTo(controller);
-
-// ////////////////////////////////
-// Test codes
-// document.body.addEventListener("wheel", (e) => {
-// 	window.scrollTo({
-// 		top: window.pageYOffset + event.deltaY * 10,
-// 		left: 0,
-// 		behavior: "smooth",
-// 	});
-// });

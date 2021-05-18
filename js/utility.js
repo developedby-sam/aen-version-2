@@ -23,3 +23,15 @@ export function numberIncreamentAnimation(
 		}
 	}, stepTime);
 }
+
+export function setLocalStorage(dataRef, { ...data }) {
+	const dataDict = {
+		...data,
+	};
+
+	localStorage.setItem(dataRef, JSON.stringify(dataDict));
+}
+
+export function getLocalStorage(dataRef) {
+	return JSON.parse(localStorage.getItem(dataRef));
+}
