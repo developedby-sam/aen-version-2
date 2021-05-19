@@ -5,6 +5,10 @@ import {
 	getLocalStorage,
 } from "./utility.js";
 
+// Intializing Libraries
+particlesJS.load("particle-js", "js/particles.json", function () {
+	console.log("callback - particles.js config loaded");
+});
 const controller = new ScrollMagic.Controller();
 Scrollbar.initAll();
 
@@ -102,18 +106,6 @@ sections.forEach((section) => {
 		.setTween(revealTimeline)
 		.addTo(controller);
 });
-
-// HEADER ANIMATION
-// const apod = document.querySelector(".apod");
-// const headerTimeline = gsap.timeline({
-// 	defaults: { duration: 2, ease: "expo.inOut" },
-// });
-
-// headerTimeline.fromTo(
-// 	apod,
-// 	{ opacity: "0", scale: "0" },
-// 	{ opacity: "1", scale: "1" }
-// );
 
 // SCROLL MAGIC CODES
 const numbersScene = new ScrollMagic.Scene({

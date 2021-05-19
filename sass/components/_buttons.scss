@@ -1,7 +1,9 @@
 .btn-container {
+	position: relative;
 	@include flex-center;
 	margin: 5rem auto;
 	padding: 1rem 5rem;
+	z-index: 5;
 }
 
 .btn {

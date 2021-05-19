@@ -1,5 +1,7 @@
 .apod {
+	position: relative;
 	@include flex-space-evenly;
+	z-index: 5;
 
 	width: 100%;
 	height: 90vh;
@@ -54,4 +56,11 @@
 		opacity: 1;
 		transform: scale(1);
 	}
+}
+
+#particle-js {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
 }
