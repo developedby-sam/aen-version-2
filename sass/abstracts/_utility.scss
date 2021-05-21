@@ -2,3 +2,8 @@
 	opacity: 0;
 	transform: translateY(8rem);
 }
+
+.shadow-on {
+	background-color: $color-primary;
+	box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.8);
+}

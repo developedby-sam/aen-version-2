@@ -5,6 +5,14 @@ import {
 	getLocalStorage,
 } from "./utility.js";
 
+// element selectors
+const apodContainer = document.querySelector(".apod__container");
+const apodText = document.querySelector(".apod__text");
+const benefic = document.querySelector("#beneficiaries");
+const countries = document.querySelector("#countries");
+const members = document.querySelector("#members");
+const nav = document.querySelector(".navigation");
+
 // Intializing Libraries
 particlesJS.load("particle-js", "js/particles.json", function () {
 	console.log("callback - particles.js config loaded");
@@ -12,10 +20,14 @@ particlesJS.load("particle-js", "js/particles.json", function () {
 const controller = new ScrollMagic.Controller();
 Scrollbar.initAll();
 
+// gsap-timelines
+// reveal-timeline
+const revealTimeline = gsap.timeline({
+	defaults: { duration: 0.1, ease: "expo.inOut" },
+});
+
 // Implementin Astronomy Picture of the Day from NASA's API
 const auth = "T7Z6BYNlOOApYYAp4PD2ERaw1h6pCtuzt8lmI7dO";
-const apodContainer = document.querySelector(".apod__container");
-const apodText = document.querySelector(".apod__text");
 
 async function fetchApi(url) {
 	const dataFetch = await fetch(url, {
@@ -75,9 +87,6 @@ async function loadAPOD() {
 loadAPOD();
 
 // Implementing increasing number animation for aen numbers
-const benefic = document.querySelector("#beneficiaries");
-const countries = document.querySelector("#countries");
-const members = document.querySelector("#members");
 // function
 function startNumberAnimation() {
 	numberIncreamentAnimation(benefic, 0, 2500, 5, 3000);
@@ -85,14 +94,10 @@ function startNumberAnimation() {
 	numberIncreamentAnimation(members, 0, 150, 1, 3000);
 }
 
-// IMPLEMENTING SECTION-REVEALING ANIMTION
+// implementing section-reveal animation
 const sections = document.querySelectorAll(".section");
 let revealScene;
 sections.forEach((section) => {
-	const revealTimeline = gsap.timeline({
-		defaults: { duration: 1, ease: "expo.out" },
-	});
-
 	revealTimeline.fromTo(
 		section,
 		{ opacity: "0", transform: "translateY(8rem)" },
@@ -107,11 +112,20 @@ sections.forEach((section) => {
 		.addTo(controller);
 });
 
-// SCROLL MAGIC CODES
+// scroll-magic
 const numbersScene = new ScrollMagic.Scene({
 	triggerElement: ".aen-at-glance__numbers",
 	triggerHook: 0.8,
 	reverse: false,
 })
 	.on("start", startNumberAnimation)
+	.addTo(controller);
+
+const navScene = new ScrollMagic.Scene({
+	triggerElement: ".apod",
+	triggerHook: 0,
+})
+	.on("start", () => {
+		nav.classList.toggle("shadow-on");
+	})
 	.addTo(controller);

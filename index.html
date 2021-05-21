@@ -18,72 +18,68 @@
     <title>AEN | Astronomy Enthusiasts in Nepal</title>
   </head>
   <body>
+    <nav class="navigation">
+      <div class="logo-container">
+        <img class="logo" src="./img/logo.png" alt="Logo" />
+      </div>
+      <!-- Navigation and nav-links -->
+      <div class="nav-links">
+        <div class="nav-link">
+          <div class="dropdown">
+            <a href="#">Who We Are <i class="im im-arrow-down"></i></a>
+            <div class="dropdown__content">
+              <a class="dropdown__content--link" href="#">About Us</a>
+              <a class="dropdown__content--link" href="#">Boards</a>
+              <a class="dropdown__content--link" href="#">Staffs</a>
+              <a class="dropdown__content--link" href="#">Contact Us</a>
+              <a class="dropdown__content--link" href="#">Policies</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-link">
+          <div class="dropdown">
+            <a href="#">Community <i class="im im-arrow-down"></i></a>
+            <div class="dropdown__content">
+              <a class="dropdown__content--link" href="#">Meetings</a>
+              <a class="dropdown__content--link" href="#">Events</a>
+              <a class="dropdown__content--link" href="#">Webinars</a>
+              <a class="dropdown__content--link" href="#">Competitions</a>
+              <a class="dropdown__content--link" href="#">Courses</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-link">
+          <div class="dropdown">
+            <a href="#">Getting Involved <i class="im im-arrow-down"></i></a>
+            <div class="dropdown__content">
+              <a class="dropdown__content--link" href="#">Join AEN family</a>
+              <a class="dropdown__content--link" href="#"
+                >Volunteer Opportunities</a
+              >
+              <a class="dropdown__content--link" href="#"
+                >Research Opportunities</a
+              >
+              <a class="dropdown__content--link" href="#">Out Reach</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-link">
+          <div class="dropdown">
+            <a href="#">Blogs <i class="im im-arrow-down"></i></a>
+            <div class="dropdown__content">
+              <!-- <a class="dropdown__content--link" href="#">Link 1</a>
+                  <a class="dropdown__content--link" href="#">Link 2</a>
+                  <a class="dropdown__content--link" href="#">Link 3</a>
+                  <a class="dropdown__content--link" href="#">Link 4</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
     <div class="root" data-scrollbar>
       <!-- Header Section of the website -->
       <header id="header">
         <div id="particle-js"></div>
-        <nav class="navigation">
-          <div class="logo-container">
-            <img class="logo" src="./img/logo.png" alt="Logo" />
-          </div>
-          <!-- Navigation and nav-links -->
-          <div class="nav-links">
-            <div class="nav-link">
-              <div class="dropdown">
-                <a href="#">Who We Are <i class="im im-arrow-down"></i></a>
-                <div class="dropdown__content">
-                  <a class="dropdown__content--link" href="#">About Us</a>
-                  <a class="dropdown__content--link" href="#">Boards</a>
-                  <a class="dropdown__content--link" href="#">Staffs</a>
-                  <a class="dropdown__content--link" href="#">Contact Us</a>
-                  <a class="dropdown__content--link" href="#">Policies</a>
-                </div>
-              </div>
-            </div>
-            <div class="nav-link">
-              <div class="dropdown">
-                <a href="#">Community <i class="im im-arrow-down"></i></a>
-                <div class="dropdown__content">
-                  <a class="dropdown__content--link" href="#">Meetings</a>
-                  <a class="dropdown__content--link" href="#">Events</a>
-                  <a class="dropdown__content--link" href="#">Webinars</a>
-                  <a class="dropdown__content--link" href="#">Competitions</a>
-                  <a class="dropdown__content--link" href="#">Courses</a>
-                </div>
-              </div>
-            </div>
-            <div class="nav-link">
-              <div class="dropdown">
-                <a href="#"
-                  >Getting Involved <i class="im im-arrow-down"></i
-                ></a>
-                <div class="dropdown__content">
-                  <a class="dropdown__content--link" href="#"
-                    >Join AEN family</a
-                  >
-                  <a class="dropdown__content--link" href="#"
-                    >Volunteer Opportunities</a
-                  >
-                  <a class="dropdown__content--link" href="#"
-                    >Research Opportunities</a
-                  >
-                  <a class="dropdown__content--link" href="#">Out Reach</a>
-                </div>
-              </div>
-            </div>
-            <div class="nav-link">
-              <div class="dropdown">
-                <a href="#">Blogs <i class="im im-arrow-down"></i></a>
-                <div class="dropdown__content">
-                  <!-- <a class="dropdown__content--link" href="#">Link 1</a>
-                  <a class="dropdown__content--link" href="#">Link 2</a>
-                  <a class="dropdown__content--link" href="#">Link 3</a>
-                  <a class="dropdown__content--link" href="#">Link 4</a> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </nav>
 
         <!-- Astronomy picture of the day -->
         <div class="apod">
@@ -264,6 +260,7 @@
         </div>
       </footer>
     </div>
+    <div class="fixed-position"></div>
     <script src="./js/vendors/particles.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
