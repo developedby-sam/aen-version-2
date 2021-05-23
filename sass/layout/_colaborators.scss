@@ -53,6 +53,53 @@
     padding: 2rem 0rem;
     .im {
       font-size: 4.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+
+      &:hover {
+        transform: scale(1.5);
+      }
+
+      &-facebook:hover {
+        color: #3b5998;
+      }
+
+      &-twitter:hover {
+        color: #1da1f2;
+      }
+
+      &-youtube:hover {
+        color: #ff0000;
+      }
+
+      &-mail:hover {
+        color: #76a7fa;
+      }
+
+      &-instagram:hover {
+        background: linear-gradient(
+          to bottom right,
+          #405de6,
+          #5b51d8,
+          #833ab4,
+          #c13584,
+          #e1306c,
+          #fd1d1d,
+          #f56040,
+          #f77737,
+          #fcaf45,
+          #ffdc80
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+    }
+
+    .im-scocial {
+      transition: all 0.3s ease;
     }
   }
 }
