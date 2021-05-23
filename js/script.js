@@ -23,7 +23,7 @@ Scrollbar.initAll();
 // gsap-timelines
 // reveal-timeline
 const revealTimeline = gsap.timeline({
-	defaults: { duration: 0.1, ease: "expo.inOut" },
+	defaults: { duration: 1, ease: "expo.inOut" },
 });
 
 // Implementin Astronomy Picture of the Day from NASA's API
