@@ -33,6 +33,18 @@
 html {
 	font-size: 62.5%;
 	box-sizing: border-box;
+
+	@include respond(tab-port) {
+		font-size: 50%; //1rem = 8px
+	}
+
+	@include respond(tab-land) {
+		font-size: 56.25%; //1rem = 9px
+	}
+
+	@include respond(big-desktop) {
+		font-size: 75%; //1rem = 12px
+	}
 }
 
 body {

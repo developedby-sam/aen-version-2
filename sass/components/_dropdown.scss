@@ -7,6 +7,10 @@
 		@include flex-center;
 	}
 
+	.im.im-arrow-down {
+		margin-left: -1px;
+	}
+
 	&:hover {
 		background-color: lighten($color-primary, 5%);
 	}

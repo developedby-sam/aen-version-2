@@ -4,4 +4,16 @@
 	width: 100%;
 	margin: 0 auto;
 	padding: 2rem 5rem;
+
+	@include respond(tab-land) {
+		padding: 2rem 4rem;
+	}
+
+	@include respond(tab-port) {
+		padding: 1rem 3rem;
+	}
+
+	@include respond(phone) {
+		padding: 1rem 2rem;
+	}
 }
