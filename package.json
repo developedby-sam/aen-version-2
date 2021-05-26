@@ -7,9 +7,10 @@
   "license": "MIT",
   "scripts": {
     "watch:sass": "sass --watch sass/main.scss css/style.css",
+    "dev-live-server": "live-server",
     "devserver": "browser-sync start --server --files '*'",
     "prettier:watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
-    "start": "npm-run-all --parallel devserver watch:sass",
+    "start": "npm-run-all --parallel dev-live-server watch:sass",
     "compile:sass": "node-sass sass/main.scss css/style.compiled.css",
     "concat:css": "concat -o css/style.concatinated.css css/icon-fonts.css css/style.compiled.css",
     "prefix:css": "postcss css/style.concatinated.css --use autoprefixer -b 'last 10 versions' -o css/style.prefixed.css  ",

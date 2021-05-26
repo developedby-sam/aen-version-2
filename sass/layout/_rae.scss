@@ -18,8 +18,18 @@
 	&__item {
 		@include flex-center-vertical;
 		padding: 4rem 2rem;
-		flex: 1 1 40rem;
+		flex: 0 1 40rem;
 		cursor: pointer;
+
+		@include respond(tab-port) {
+			padding: 3rem 1rem;
+			flex: 0 1 35rem;
+		}
+
+		@include respond(phone) {
+			padding: 2rem 1rem;
+			flex: 0 1 30rem;
+		}
 
 		p {
 			padding-top: 1rem;
@@ -27,6 +37,18 @@
 
 		.im {
 			font-size: 7rem;
+
+			@include respond(tab-land) {
+				font-size: 6rem;
+			}
+
+			@include respond(tab-port) {
+				font-size: 5rem;
+			}
+
+			@include respond(phone) {
+				font-size: 4;
+			}
 		}
 	}
 
@@ -35,4 +57,21 @@
 	// 	background-clip: text;
 	// 	color: transparent;
 	// }
+
+	.card.rae-item {
+		@include respond(tab-land) {
+			width: 25rem;
+			height: 25rem;
+		}
+
+		@include respond(tab-port) {
+			width: 20rem;
+			height: 20rem;
+		}
+
+		@include respond(phone) {
+			width: 15rem;
+			height: 15rem;
+		}
+	}
 }
