@@ -9,6 +9,8 @@
 	&__container {
 		@include flex-space-evenly;
 		flex-wrap: wrap;
+		grid-row-gap: 5rem;
+		grid-column-gap: 5rem;
 		width: 90%;
 		margin: 8rem auto;
 	}
@@ -17,26 +19,20 @@
 		@include flex-center-vertical;
 		padding: 4rem 2rem;
 		flex: 1 1 40rem;
+		cursor: pointer;
 
 		p {
 			padding-top: 1rem;
 		}
 
 		.im {
-			font-size: 4.8rem;
-			cursor: pointer;
-		}
-
-		&--sci-debate,
-		&--blog-posts {
-			border-left: 0.1rem solid white;
-			border-right: 0.1rem solid white;
-		}
-
-		&--sci-talks,
-		&--sci-debate,
-		&--discussion {
-			border-bottom: 0.1rem solid white;
+			font-size: 7rem;
 		}
 	}
+
+	// .card:hover .im.im-microphone {
+	// 	background-color: #32cd32;
+	// 	background-clip: text;
+	// 	color: transparent;
+	// }
 }

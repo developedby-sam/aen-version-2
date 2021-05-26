@@ -161,6 +161,11 @@ a {
   align-items: center;
   justify-content: space-evenly;
 }
+@media screen and (max-width: 56.3em) {
+  .navigation .nav-links {
+    display: none;
+  }
+}
 .navigation .nav-links a {
   font-weight: 300;
 }
@@ -262,6 +267,19 @@ a {
   margin-left: 1rem;
 }
 
+.card {
+  min-width: 30rem;
+  min-height: 30rem;
+  border-radius: 3px;
+  box-shadow: 6px 10px 12px rgba(0, 0, 0, 0.3);
+  backface-visibility: none;
+  transition: all 0.2s ease;
+}
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.2);
+}
+
 #header {
   position: relative;
   min-height: 10vh;
@@ -333,6 +351,8 @@ a {
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  grid-row-gap: 5rem;
+  grid-column-gap: 5rem;
   width: 90%;
   margin: 8rem auto;
 }
@@ -343,20 +363,13 @@ a {
   justify-content: center;
   padding: 4rem 2rem;
   flex: 1 1 40rem;
+  cursor: pointer;
 }
 .rae__item p {
   padding-top: 1rem;
 }
 .rae__item .im {
-  font-size: 4.8rem;
-  cursor: pointer;
-}
-.rae__item--sci-debate, .rae__item--blog-posts {
-  border-left: 0.1rem solid white;
-  border-right: 0.1rem solid white;
-}
-.rae__item--sci-talks, .rae__item--sci-debate, .rae__item--discussion {
-  border-bottom: 0.1rem solid white;
+  font-size: 7rem;
 }
 
 .aen-at-glance {
@@ -472,7 +485,7 @@ a {
   color: #ff0000;
 }
 .collaborators__social-media .im-mail:hover {
-  color: #76a7fa;
+  color: #1aa260;
 }
 .collaborators__social-media .im-instagram:hover {
   background: linear-gradient(to bottom right, #405de6, #5b51d8, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80);

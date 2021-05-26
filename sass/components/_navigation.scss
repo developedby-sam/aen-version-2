@@ -36,6 +36,10 @@
 		align-items: center;
 		justify-content: space-evenly;
 
+		@include respond(tab-port) {
+			display: none;
+		}
+
 		a {
 			font-weight: 300;
 		}

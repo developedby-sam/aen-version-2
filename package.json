@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "watch:sass": "sass --watch sass/main.scss css/style.css",
-    "devserver": "browser-sync start --server",
+    "devserver": "browser-sync start --server --files '*'",
     "prettier:watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
     "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "node-sass sass/main.scss css/style.compiled.css",

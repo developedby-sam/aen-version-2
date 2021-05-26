@@ -1,0 +1,13 @@
+.card {
+	min-width: 30rem;
+	min-height: 30rem;
+	border-radius: 3px;
+	box-shadow: 6px 10px 12px rgba($black, 0.3);
+	backface-visibility: none;
+	transition: all 0.2s ease;
+
+	&:hover {
+		transform: scale(1.03);
+		box-shadow: 4px 8px 10px rgba($black, 0.2);
+	}
+}
