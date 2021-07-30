@@ -12,13 +12,22 @@
 @import "./components/_dropdown";
 @import "./components/_buttons";
 @import "./components/_cards";
+@import "./components/_slider";
+@import "./components/_infinite-slider";
+@import "./components/_blog";
+@import "./components/_gallery";
 
 // importing layouts
 @import "./layout/header";
 @import "./layout/content-loader";
 @import "./layout/_rae";
+@import "./layout/_out-reach";
+@import "./layout/_our-team";
 @import "./layout/_aen_at_glance";
+@import "./layout/_blogs";
+@import "./layout/_gallery";
 @import "./layout/_colaborators";
+@import "./layout/_get-in-touch";
 @import "./layout/_footer";
 
 // importing pages

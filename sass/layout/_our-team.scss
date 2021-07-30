@@ -1,0 +1,58 @@
+.our-team {
+	&__container {
+		@include flex-space-between;
+		flex-wrap: wrap;
+		padding: 10rem 5rem;
+	}
+
+	&__member {
+		width: 15rem;
+		flex: 0 1 20rem;
+		img {
+			width: 15rem;
+			height: 15rem;
+			border: none;
+			border-radius: 50%;
+			object-fit: cover;
+			margin: 2rem;
+		}
+
+		h2 {
+			text-transform: uppercase;
+			font-weight: 400;
+			font-size: 2rem;
+			padding: 0.5rem 1rem;
+			text-align: center;
+		}
+
+		p {
+			font-size: 1.6rem;
+			padding: 0.5rem;
+			text-align: center;
+		}
+
+		.contact-links {
+			@include flex-space-evenly;
+			padding: 1rem 0;
+
+			.im {
+				@include flex-center;
+				font-size: 1.6rem;
+				border: 1px solid #f3f4f6;
+				color: #f3f4f6;
+				border-radius: 50%;
+				padding: 0.8rem;
+				transition: all 200ms ease-in;
+			}
+
+			.im:hover {
+				border: 1px solid #9ca3af;
+				color: #9ca3af;
+			}
+		}
+	}
+
+	.btn-container {
+		@include flex-center;
+	}
+}

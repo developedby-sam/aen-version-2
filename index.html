@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Link for all the dependencies are included here -->
+    <script
+      src="https://code.jquery.com/jquery-2.2.0.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css"
@@ -14,6 +20,10 @@
       rel="stylesheet"
     />
     <!-- Link for the css is file -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <title>AEN | Astronomy Enthusiasts in Nepal</title>
   </head>
@@ -29,48 +39,60 @@
             <a href="#">Who We Are <i class="im im-arrow-down"></i></a>
             <div class="dropdown__content">
               <a class="dropdown__content--link" href="#">About Us</a>
-              <a class="dropdown__content--link" href="#">Boards</a>
-              <a class="dropdown__content--link" href="#">Staffs</a>
-              <a class="dropdown__content--link" href="#">Contact Us</a>
-              <a class="dropdown__content--link" href="#">Policies</a>
+              <a class="dropdown__content--link" href="#">Our Team</a>
+              <a class="dropdown__content--link" href="#">Our Partners</a>
+              <a class="dropdown__content--link" href="#">FAQs</a>
+              <a class="dropdown__content--link" href="#">Contact</a>
             </div>
           </div>
         </div>
         <div class="nav-link">
           <div class="dropdown">
-            <a href="#">Community <i class="im im-arrow-down"></i></a>
+            <a href="#">Our Events <i class="im im-arrow-down"></i></a>
             <div class="dropdown__content">
-              <a class="dropdown__content--link" href="#">Meetings</a>
-              <a class="dropdown__content--link" href="#">Events</a>
-              <a class="dropdown__content--link" href="#">Webinars</a>
+              <a class="dropdown__content--link" href="#">Talk shows</a>
+              <a class="dropdown__content--link" href="#">TED AEN</a>
+              <a class="dropdown__content--link" href="#"
+                >Discussion Sessions</a
+              >
+              <a class="dropdown__content--link" href="#">E-Courses</a>
+              <a class="dropdown__content--link" href="#">Outreach</a>
+              <a class="dropdown__content--link" href="#">AstroDebates</a>
               <a class="dropdown__content--link" href="#">Competitions</a>
-              <a class="dropdown__content--link" href="#">Courses</a>
             </div>
           </div>
         </div>
         <div class="nav-link">
           <div class="dropdown">
-            <a href="#">Getting Involved <i class="im im-arrow-down"></i></a>
+            <a href="#">Gallery <i class="im im-arrow-down"></i></a>
+          </div>
+        </div>
+        <div class="nav-link">
+          <div class="dropdown">
+            <a href="#">Get Involved <i class="im im-arrow-down"></i></a>
             <div class="dropdown__content">
-              <a class="dropdown__content--link" href="#">Join AEN family</a>
+              <a class="dropdown__content--link" href="#">Start a Club</a>
               <a class="dropdown__content--link" href="#"
                 >Volunteer Opportunities</a
               >
               <a class="dropdown__content--link" href="#"
-                >Research Opportunities</a
+                >Organize an event/outreac</a
               >
-              <a class="dropdown__content--link" href="#">Out Reach</a>
+              <a class="dropdown__content--link" href="#">Sponser Events</a>
             </div>
           </div>
         </div>
         <div class="nav-link">
           <div class="dropdown">
-            <a href="#">Blogs <i class="im im-arrow-down"></i></a>
+            <a href="#">Join Us <i class="im im-arrow-down"></i></a>
             <div class="dropdown__content">
-              <!-- <a class="dropdown__content--link" href="#">Link 1</a>
-                  <a class="dropdown__content--link" href="#">Link 2</a>
-                  <a class="dropdown__content--link" href="#">Link 3</a>
-                  <a class="dropdown__content--link" href="#">Link 4</a> -->
+              <a class="dropdown__content--link" href="#">As a member</a>
+              <a class="dropdown__content--link" href="#"
+                >As a college representative</a
+              >
+              <a class="dropdown__content--link" href="#"
+                >As a supporter/partner</a
+              >
             </div>
           </div>
         </div>
@@ -80,6 +102,49 @@
       <!-- Header Section of the website -->
       <header id="header">
         <div id="particle-js"></div>
+        <div class="header-slider">
+          <div class="header-slide">
+            <img src="img/header-slide1.JPG" alt="img-1" />
+            <div class="header-slide-text">
+              <h1>Welcome to Astronomy Enthusiasts in Nepal</h1>
+              <p>
+                official website of AEN, one stop for all space enthusiasts in
+                Nepal.
+              </p>
+            </div>
+          </div>
+
+          <div class="header-slide">
+            <img src="img/header-slide2.jpg" alt="img-2" />
+            <div class="header-slide-text">
+              <h1>We create</h1>
+              <p>social impact by spreading knowledge.</p>
+            </div>
+          </div>
+
+          <div class="header-slide">
+            <img src="img/header-slide3.JPG" alt="img-3" />
+            <div class="header-slide-text">
+              <h1>Inspiring</h1>
+              <p>new generation of students.</p>
+            </div>
+          </div>
+
+          <div class="header-slide">
+            <img src="img/header-slide4.JPG" alt="img-4" />
+            <div class="header-slide-text">
+              <h1>Creating platform</h1>
+              <p>
+                where space enthusiasts can connect, share ideas and express
+                themselves.
+              </p>
+            </div>
+          </div>
+
+          <button class="slider__btn slider__btn--left">&larr;</button>
+          <button class="slider__btn slider__btn--right">&rarr;</button>
+          <div class="dots"></div>
+        </div>
 
         <!-- Astronomy picture of the day -->
         <div class="apod">
@@ -111,135 +176,412 @@
 
       <!-- SECTION RESOURCES AND EVENTS -->
       <section class="rae section">
-        <h3 class="rae__title primary-heading">Resources and Events</h3>
+        <h3 class="rae__title primary-heading">Our Events</h3>
+        <p>
+          We are always organizing new and engaging activities for our members.
+          Below are some of the activities we actually offer. Read on to learn
+          more and feel free to get in touch for more information. We hope
+          you'll join us!
+        </p>
         <div class="rae__container">
           <div class="card rae__item rae__item--sci-talks">
-            <a href="#"><i class="im im-microphone"></i></a>
-            <p>Scientific Talks</p>
+            <img src="img/img-4.jpg" alt="card" />
+            <a href="#">Talk shows</a>
           </div>
 
           <div class="card rae__item rae__item--sci-debate">
-            <a href="#"><i class="im im-users"></i></a>
-            <p>Scientific Debates</p>
+            <img src="img/img-4.jpg" alt="card" />
+            <a href="#">TED AEN</a>
           </div>
 
           <div class="card rae__item rae__item--discussion">
-            <a href="#"><i class="im im-speech-bubble-comment"></i></a>
-            <p>Discussions</p>
+            <img src="img/img-4.jpg" alt="card" />
+            <a href="#">Discussion Sessions</a>
           </div>
 
           <div class="card rae__item rae__item--online-course">
-            <a href="#"><i class="im im-laptop-o"></i></a>
-            <p>Online Course</p>
+            <img src="img/img-4.jpg" alt="card" />
+            <a href="#">E-Courses</a>
           </div>
 
           <div class="card rae__item rae__item--blog-posts">
-            <a href="#"><i class="im im-blogger"></i></a>
-            <p>Blog Posts</p>
+            <img src="img/img-4.jpg" alt="card" />
+            <a href="#">Outreach</a>
           </div>
 
           <div class="card rae__item rae__item--podcasts">
-            <a href="#"><i class="im im-spotify"></i></a>
-            <p>Podcasts</p>
+            <img src="img/img-4.jpg" alt="card" />
+            <a href="#">AstroDebates</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="out-reach">
+        <h2 class="secondary-heading">Out Reach</h2>
+
+        <div class="out-reach-container">
+          <div class="card-feature">
+            <img src="img/Mars.jpg" alt="mars" />
+            <p>
+              Lorem ipsum dolor, sit amet, consectetur adipisicing elit.
+              Obcaecati explicabo facilis, quidem doloribus vitae, soluta vel
+              cum accusantium unde corrupti neque earum quidem doloribus vitae,
+              soluta vel cum accusantium unde corrupti neque earum.
+            </p>
+            <p class="details">Nepal | Kathmandu | 20 Sep - 23 Sep</p>
+            <button>Register</button>
+            <button>Sponsor</button>
+          </div>
+
+          <div class="card-feature">
+            <img src="img/Mars.jpg" alt="mars" />
+            <p>
+              Lorem ipsum dolor, sit amet, consectetur adipisicing elit.
+              Obcaecati explicabo facilis, quidem doloribus vitae, soluta vel
+              cum accusantium unde corrupti neque earum quidem doloribus vitae,
+              soluta vel cum accusantium unde corrupti neque earum.
+            </p>
+            <p class="details">Nepal | Kathmandu | 20 Sep - 23 Sep</p>
+            <div class="links">
+              <button>Register</button>
+              <button>Sponsor</button>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="aen-at-glance section">
-        <h2 class="aen-at-glance__heading primary-heading">AEN at a Glance</h2>
+        <h2 class="aen-at-glance__heading primary-heading">
+          Explore the cosmos with us
+        </h2>
         <p class="aen-at-glance__desc">
-          The Astronomy Enthusiasts in Nepal (AEN) is a community of youths
-          initiated non-profit organization that serves a purpose of fostering a
-          inovative and collaborative approach to spreading astronomy knowledge
-          across Nepal guided by the vision "Lets's Explore Togehter". <br />
-          <br />
-          AEN aims to connect people of any age for flourishing their love of
-          astronomy and with time aiding in the growth of the astronomical
-          community in Nepal.
+          The Astronomy Enthusiasts in Nepal (AEN) was founded in 2020 after a
+          group of National/International Astronomy Olympiad winners decided to
+          turn their shared interest of spreading astronomy in Nepal into an
+          official non-profit initiation. Since then, we've grown as a
+          community, and have expanded what we offer to our society.
+          <a href="#">View our story & goals...</a>
         </p>
         <div class="aen-at-glance__numbers">
-          <div class="aen-at-glance__numbers--benefic">
-            <h3 id="beneficiaries">2500+</h3>
-            <p>Total Beneficiaries</p>
-          </div>
-
-          <div class="aen-at-glance__numbers--reach">
-            <h3 id="countries">11+</h3>
-            <p>Countries Reached</p>
+          <div class="aen-at-glance__numbers--volunteers">
+            <h3 id="volunteers">250+</h3>
+            <p>Volunteers</p>
           </div>
 
           <div class="aen-at-glance__numbers--members">
             <h3 id="members">150+</h3>
             <p>Members</p>
           </div>
+
+          <div class="aen-at-glance__numbers--participants">
+            <h3 id="participants">10000+</h3>
+            <p>Participants</p>
+          </div>
+
+          <div class="aen-at-glance__numbers--partners">
+            <h3 id="partners">20+</h3>
+            <p>Partners</p>
+          </div>
+
+          <div class="aen-at-glance__numbers--colleges">
+            <h3 id="colleges">40+</h3>
+            <p>Colleges</p>
+          </div>
         </div>
 
         <!-- <div class="aen-at-glance__btm-banner"></div> -->
       </section>
 
+      <section class="our-team">
+        <h1 class="primary-heading">Meet our Founding Members</h1>
+        <div class="our-team__container">
+          <div class="our-team__member">
+            <img src="img/img-7.jpg" alt="member-1" />
+            <h2>John Smith</h2>
+            <p>President</p>
+            <div class="contact-links">
+              <a href="#"><i class="im im-facebook"></i></a>
+              <a href="#"> <i class="im im-instagram"></i></a>
+              <a href="#"><i class="im im-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="our-team__member">
+            <img src="img/img-7.jpg" alt="member-1" />
+            <h2>John Smith</h2>
+            <p>President</p>
+            <div class="contact-links">
+              <a href="#"><i class="im im-facebook"></i></a>
+              <a href="#"> <i class="im im-instagram"></i></a>
+              <a href="#"><i class="im im-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="our-team__member">
+            <img src="img/img-7.jpg" alt="member-1" />
+            <h2>John Smith</h2>
+            <p>President</p>
+            <div class="contact-links">
+              <a href="#"><i class="im im-facebook"></i></a>
+              <a href="#"> <i class="im im-instagram"></i></a>
+              <a href="#"><i class="im im-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="our-team__member">
+            <img src="img/img-7.jpg" alt="member-1" />
+            <h2>John Smith</h2>
+            <p>President</p>
+            <div class="contact-links">
+              <a href="#"><i class="im im-facebook"></i></a>
+              <a href="#"> <i class="im im-instagram"></i></a>
+              <a href="#"><i class="im im-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="our-team__member">
+            <img src="img/img-7.jpg" alt="member-1" />
+            <h2>John Smith</h2>
+            <p>President</p>
+            <div class="contact-links">
+              <a href="#"><i class="im im-facebook"></i></a>
+              <a href="#"> <i class="im im-instagram"></i></a>
+              <a href="#"><i class="im im-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="btn-container">
+          <a class="btn btn-primary">View Teams <span>&xrarr;</span></a>
+        </div>
+      </section>
+
+      <section class="blogs">
+        <h1 class="primary-heading">Our Blogs</h1>
+        <h2>Never stop learning and exploring</h2>
+        <div class="blogs__container">
+          <div class="blog">
+            <img src="img/img-8.jpg" alt="blog-img" />
+            <h3 class="blog-title">Title of the blog</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Beatae
+              sunt corrupti libero minus nisi blanditiis!
+            </p>
+            <div class="details">
+              <p class="blog-date">20 Jun 2020</p>
+              <a href="#">Read more <span>&rarr;</span></a>
+            </div>
+          </div>
+
+          <div class="blog">
+            <img src="img/img-8.jpg" alt="blog-img" />
+            <h3 class="blog-title">Title of the blog</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Beatae
+              sunt corrupti libero minus nisi blanditiis!
+            </p>
+            <div class="details">
+              <p class="blog-date">20 Jun 2020</p>
+              <a href="#">Read more <span>&rarr;</span></a>
+            </div>
+          </div>
+
+          <div class="blog">
+            <img src="img/img-8.jpg" alt="blog-img" />
+            <h3 class="blog-title">Title of the blog</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Beatae
+              sunt corrupti libero minus nisi blanditiis!
+            </p>
+            <div class="details">
+              <p class="blog-date">20 Jun 2020</p>
+              <a href="#">Read more <span>&rarr;</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <h2 class="secondary-heading">Gallery</h2>
+        <p>Capturing memories and reminiscing old days..</p>
+        <div class="gallery__container">
+          <div class="gallery__item">
+            <img src="img/img-5.jpg" alt="gallery-item" />
+          </div>
+          <div class="gallery__item">
+            <img src="img/img-3.jpg" alt="gallery-item" />
+          </div>
+          <div class="gallery__item">
+            <img src="img/img-7.jpg" alt="gallery-item" />
+          </div>
+          <div class="gallery__item">
+            <img src="img/img-1.jpg" alt="gallery-item" />
+          </div>
+          <div class="gallery__item">
+            <img src="img/img-3.jpg" alt="gallery-item" />
+          </div>
+          <div class="gallery__item">
+            <img src="img/img-6.jpg" alt="gallery-item" />
+          </div>
+        </div>
+      </section>
+
       <section class="collaborators section">
         <h2 class="collaborators__heading secondary-heading">Our Partners</h2>
 
-        <div class="collaborators__container">
-          <div class="collaborators__container--box collab-animation">
-            <img
-              src="./img/collaborators/explore scientific.png"
-              alt="Explore Scientific"
-            />
-            <img
-              src="./img/collaborators/Sputniks.png"
-              alt="Sputniks Astronomical Society"
-            />
-            <img src="./img/collaborators/tbc.png" alt="Explore Scientific" />
-            <img
-              src="./img/collaborators/sos astronomy club.jpg"
-              alt="Explore Scientific"
-            />
-            <img
-              src="./img/collaborators/Adarsha janapremi school.png"
-              alt="Adarsha janapremi"
-            />
-            <img
-              src="./img/collaborators/Astronomy CLub of cameron.png"
-              alt="Astronomy CLub of cameron"
-            />
-            <img
-              src="./img/collaborators/CCRC scientific circle.jpg"
-              alt="CCRC scientific circle"
-            />
-            <img src="./img/collaborators/hamropatro.png" alt="Hamtopatra" />
-            <img src="./img/collaborators/petriorcher.png" alt="petriorcher" />
-            <img
-              src="./img/collaborators/shiddhartha vidyapeeth school.jpg"
-              alt="shiddhartha vidyapeeth school"
-            />
-            <img
-              src="./img/collaborators/Viswa adarsha schoool.jpg"
-              alt="Viswa adarsha schoool"
-            />
+        <div class="container">
+          <section class="customer-logos slider">
+            <div class="slide">
+              <img
+                src="./img/collaborators/explore scientific.png"
+                alt="Explore Scientific"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="./img/collaborators/Sputniks.png"
+                alt="Sputniks Astronomical Society"
+              />
+            </div>
+            <div class="slide">
+              <img src="./img/collaborators/tbc.png" alt="TBC" />
+            </div>
+            <div class="slide">
+              <img
+                src="./img/collaborators/sos astronomy club.jpg"
+                alt="SOSAC"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="./img/collaborators/Adarsha janapremi school.png"
+                alt="Adarsha janapremi"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="./img/collaborators/Astronomy CLub of cameron.png"
+                alt="Astronomy CLub of cameron"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="./img/collaborators/CCRC scientific circle.jpg"
+                alt="CCRC scientific circle"
+              />
+            </div>
+            <div class="slide">
+              <img src="./img/collaborators/hamropatro.png" alt="Hamtopatra" />
+            </div>
+            <div class="slide">
+              <img
+                src="./img/collaborators/petriorcher.png"
+                alt="petriorcher"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="./img/collaborators/shiddhartha vidyapeeth school.jpg"
+                alt="shiddhartha vidyapeeth school"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="./img/collaborators/Viswa adarsha schoool.jpg"
+                alt="Viswa adarsha schoool"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="./img/collaborators/colab-1.png"
+                alt="Viswa adarsha schoool"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="./img/collaborators/colab-2.jpg"
+                alt="Viswa adarsha schoool"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="./img/collaborators/colab-3.jpg"
+                alt="Viswa adarsha schoool"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="./img/collaborators/colab-4.jpg"
+                alt="Viswa adarsha schoool"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="./img/collaborators/colab-5.jpg"
+                alt="Viswa adarsha schoool"
+              />
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="get-in-touch">
+        <div class="contact-details">
+          <div class="contact">
+            <div class="contact-icon"><i class="im im-location"></i></div>
+            <div class="contact-text">
+              <h3>OUR LOCATION</h3>
+              <p>Kathmandu, Nepal</p>
+            </div>
+          </div>
+
+          <div class="contact">
+            <div class="contact-icon"><i class="im im-paperplane"></i></div>
+            <div class="contact-text">
+              <h3>SEND E-MAIL</h3>
+              <p>info@aen-nepal.org</p>
+            </div>
+          </div>
+
+          <div class="contact">
+            <div class="contact-icon"><i class="im im-mobile"></i></div>
+            <div class="contact-text">
+              <h3>CONTACT US</h3>
+              <p>+977 9808786543</p>
+            </div>
           </div>
         </div>
 
-        <div class="collaborators__social">
-          <h3 class="collaborators__social--heading">
-            Let's Connect and Explore
-          </h3>
-          <div class="collaborators__social--container">
-            <div class="collaborators__social-media">
-              <a href="#"><i class="im im-scocial im-facebook"></i></a>
-            </div>
-            <div class="collaborators__social-media">
-              <a href="#"><i class="im im-scocial im-twitter"></i></a>
-            </div>
-            <div class="collaborators__social-media">
-              <a href="#"><i class="im im-scocial im-youtube"></i></a>
-            </div>
-            <div class="collaborators__social-media">
-              <a href="#"><i class="im im-scocial im-mail"></i></a>
-            </div>
-            <div class="collaborators__social-media">
-              <a href="#"><i class="im im-scocial im-instagram"></i></a>
-            </div>
+        <h2 class="secondary-heading">GET IN TOUCH</h2>
+
+        <div class="social-links">
+          <div class="link">
+            <a href="#">
+              <i class="im im-facebook"></i>
+            </a>
+          </div>
+
+          <div class="link">
+            <a href="#">
+              <i class="im im-twitter"></i>
+            </a>
+          </div>
+
+          <div class="link">
+            <a href="#">
+              <i class="im im-instagram"></i>
+            </a>
+          </div>
+
+          <div class="link">
+            <a href="#">
+              <i class="im im-youtube"></i>
+            </a>
+          </div>
+
+          <div class="link">
+            <a href="#">
+              <i class="im im-mail"></i>
+            </a>
           </div>
         </div>
       </section>
@@ -261,7 +603,9 @@
       </footer>
     </div>
     <div class="fixed-position"></div>
+    <script src="https://unpkg.com/feather-icons"></script>
     <script src="./js/vendors/particles.min.js"></script>
+    <script src="./js/vendors/carousel.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script

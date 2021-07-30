@@ -1,0 +1,15 @@
+.out-reach {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+		url("../../img/img-5.jpg");
+	background-position: center;
+	background-size: cover;
+	padding-bottom: 10rem;
+
+	h2 {
+		padding: 5rem;
+	}
+
+	.out-reach-container {
+		@include flex-space-evenly;
+	}
+}

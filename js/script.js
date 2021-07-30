@@ -8,9 +8,11 @@ import {
 // element selectors
 const apodContainer = document.querySelector(".apod__container");
 const apodText = document.querySelector(".apod__text");
-const benefic = document.querySelector("#beneficiaries");
-const countries = document.querySelector("#countries");
+const volunteers = document.querySelector("#volunteers");
+const participants = document.querySelector("#participants");
 const members = document.querySelector("#members");
+const partners = document.querySelector("#partners");
+const colleges = document.querySelector("#colleges");
 const nav = document.querySelector(".navigation");
 
 // Intializing Libraries
@@ -89,9 +91,11 @@ loadAPOD();
 // Implementing increasing number animation for aen numbers
 // function
 function startNumberAnimation() {
-	numberIncreamentAnimation(benefic, 0, 2500, 5, 3000);
-	numberIncreamentAnimation(countries, 0, 11, 1, 3000);
-	numberIncreamentAnimation(members, 0, 150, 1, 3000);
+	numberIncreamentAnimation(volunteers, 0, 250, 5, 3000);
+	numberIncreamentAnimation(participants, 0, 10000, 500, 4000);
+	numberIncreamentAnimation(members, 0, 150, 5, 3000);
+	numberIncreamentAnimation(partners, 0, 20, 1, 2000);
+	numberIncreamentAnimation(colleges, 0, 40, 1, 2000);
 }
 
 // implementing section-reveal animation
@@ -122,10 +126,103 @@ const numbersScene = new ScrollMagic.Scene({
 	.addTo(controller);
 
 const navScene = new ScrollMagic.Scene({
-	triggerElement: ".apod",
+	triggerElement: ".header-slider",
 	triggerHook: 0,
 })
 	.on("start", () => {
 		nav.classList.toggle("shadow-on");
 	})
 	.addTo(controller);
+
+///////////////////////////////////
+//////////////////////////////////
+//Slider
+const slider = function () {
+	const slides = document.querySelectorAll(".header-slide");
+	const btnLeft = document.querySelector(".slider__btn--left");
+	const btnRight = document.querySelector(".slider__btn--right");
+	const dotContainer = document.querySelector(".dots");
+
+	let curSlide = 0;
+	const maxSlide = slides.length;
+
+	// Functions
+	const createDots = function () {
+		slides.forEach(function (_, i) {
+			dotContainer.insertAdjacentHTML(
+				"beforeend",
+				`<button class="dots__dot" data-slide="${i}"></button>`
+			);
+		});
+	};
+
+	const activateDot = function (slide) {
+		document
+			.querySelectorAll(".dots__dot")
+			.forEach((dot) => dot.classList.remove("dots__dot--active"));
+
+		document
+			.querySelector(`.dots__dot[data-slide="${slide}"]`)
+			.classList.add("dots__dot--active");
+	};
+
+	const goToSlide = function (slide) {
+		slides.forEach(
+			(s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+		);
+	};
+
+	// Next slide
+	const nextSlide = function () {
+		if (curSlide === maxSlide - 1) {
+			curSlide = 0;
+		} else {
+			curSlide++;
+		}
+
+		goToSlide(curSlide);
+		activateDot(curSlide);
+	};
+
+	const prevSlide = function () {
+		if (curSlide === 0) {
+			curSlide = maxSlide - 1;
+		} else {
+			curSlide--;
+		}
+		goToSlide(curSlide);
+		activateDot(curSlide);
+	};
+
+	const init = function () {
+		goToSlide(0);
+		createDots();
+
+		activateDot(0);
+	};
+	init();
+
+	// Event handlers
+	btnRight.addEventListener("click", nextSlide);
+	btnLeft.addEventListener("click", prevSlide);
+
+	setInterval(function () {
+		nextSlide();
+	}, 3000);
+
+	document.addEventListener("keydown", function (e) {
+		if (e.key === "ArrowLeft") prevSlide();
+		e.key === "ArrowRight" && nextSlide();
+	});
+
+	dotContainer.addEventListener("click", function (e) {
+		if (e.target.classList.contains("dots__dot")) {
+			const { slide } = e.target.dataset;
+			goToSlide(slide);
+			activateDot(slide);
+		}
+	});
+};
+slider();
+/////////////////////////////////////
+////////////////////////////////////

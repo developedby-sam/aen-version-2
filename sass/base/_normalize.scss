@@ -79,4 +79,17 @@ h4 {
 a {
 	text-decoration: none;
 	color: $gray-dark;
+
+	&:hover {
+		text-decoration: none;
+		color: currentColor;
+	}
 }
+
+// .slide-content .scroller {
+// 	width: 1024px;
+// }
+
+// * {
+// 	outline: 1px solid #f00 !important;
+// }

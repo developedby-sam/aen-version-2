@@ -1,6 +1,16 @@
 .collaborators {
+  background: linear-gradient(
+      to bottom right,
+      rgba(#2563eb, 0.2),
+      rgba(#34d399, 0.6)
+    ),
+    url("../../img/partners-bg.jpg");
+  background-size: cover;
+  background-position: bottom;
   width: 100%;
   @include flex-v-space-evenly;
+
+  padding-bottom: 5rem;
 
   &__heading {
     width: 100%;
@@ -10,7 +20,7 @@
 
   &__container {
     width: 100%;
-    background: #fff;
+    background: rgba(white, 0.3);
     padding: 5rem 0rem;
 
     @include flex-space-evenly;
@@ -18,102 +28,106 @@
 
     &--box {
       width: 80%;
-      background: #fff;
+      background: transparent;
       padding: 2rem 0rem;
 
       @include flex-space-between;
 
       img {
         width: 15rem;
-        height: auto;
+        height: 15rem;
+        border-radius: 25%;
+      }
+
+      img:not(:last-child) {
         margin-right: 4rem;
       }
     }
   }
 
-  &__social {
-    @include flex-v-space-evenly;
+  //   &__social {
+  //     @include flex-v-space-evenly;
 
-    width: 100%;
-    padding: 2rem 0rem;
+  //     width: 100%;
+  //     padding: 2rem 0rem;
 
-    &--heading {
-      font-size: 2.4rem;
-      font-weight: 300;
-      margin: 3rem 0rem;
-    }
+  //     &--heading {
+  //       font-size: 2.4rem;
+  //       font-weight: 300;
+  //       margin: 3rem 0rem;
+  //     }
 
-    &--container {
-      width: 60%;
-      @include flex-space-evenly;
-    }
-  }
+  //     &--container {
+  //       width: 60%;
+  //       @include flex-space-evenly;
+  //     }
+  //   }
 
-  &__social-media {
-    padding: 2rem 0rem;
-    .im {
-      font-size: 4.8rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
+  //   &__social-media {
+  //     padding: 2rem 0rem;
+  //     .im {
+  //       font-size: 4.8rem;
+  //       display: flex;
+  //       align-items: center;
+  //       justify-content: center;
+  //       padding: 2rem;
 
-      &:hover {
-        transform: scale(1.5);
-      }
+  //       &:hover {
+  //         transform: scale(1.5);
+  //       }
 
-      &-facebook:hover {
-        color: #3b5998;
-      }
+  //       &-facebook:hover {
+  //         color: #3b5998;
+  //       }
 
-      &-twitter:hover {
-        color: #1da1f2;
-      }
+  //       &-twitter:hover {
+  //         color: #1da1f2;
+  //       }
 
-      &-youtube:hover {
-        color: #ff0000;
-      }
+  //       &-youtube:hover {
+  //         color: #ff0000;
+  //       }
 
-      &-mail:hover {
-        color: #1aa260;
-      }
+  //       &-mail:hover {
+  //         color: #1aa260;
+  //       }
 
-      &-instagram:hover {
-        background: linear-gradient(
-          to bottom right,
-          #405de6,
-          #5b51d8,
-          #833ab4,
-          #c13584,
-          #e1306c,
-          #fd1d1d,
-          #f56040,
-          #f77737,
-          #fcaf45,
-          #ffdc80
-        );
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-      }
-    }
+  //       &-instagram:hover {
+  //         background: linear-gradient(
+  //           to bottom right,
+  //           #405de6,
+  //           #5b51d8,
+  //           #833ab4,
+  //           #c13584,
+  //           #e1306c,
+  //           #fd1d1d,
+  //           #f56040,
+  //           #f77737,
+  //           #fcaf45,
+  //           #ffdc80
+  //         );
+  //         background-clip: text;
+  //         -webkit-background-clip: text;
+  //         color: transparent;
+  //       }
+  //     }
 
-    .im-scocial {
-      transition: all 0.3s ease;
-    }
-  }
-}
+  //     .im-scocial {
+  //       transition: all 0.3s ease;
+  //     }
+  //   }
+  // }
 
-.collab-animation {
-  transform: translateX(-10%);
-  animation: collab-anim 10s linear 5s infinite alternate;
-}
+  // .collab-animation {
+  //   transform: translateX(-10%);
+  //   animation: collab-anim 10s linear 5s infinite alternate;
+  // }
 
-@keyframes collab-anim {
-  from {
-    transform: translateX(-10%);
-  }
-  to {
-    transform: translateX(-70%);
-  }
+  // @keyframes collab-anim {
+  //   from {
+  //     transform: translateX(-10%);
+  //   }
+  //   to {
+  //     transform: translateX(-70%);
+  //   }
 }

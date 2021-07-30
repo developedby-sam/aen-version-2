@@ -1,0 +1,18 @@
+.gallery {
+	background-color: black;
+	padding-bottom: 5rem;
+
+	h2 {
+		margin-top: 0 !important;
+	}
+
+	p {
+		padding: 5rem 8rem;
+		text-align: center;
+	}
+
+	&__container {
+		@include flex-space-evenly;
+		flex-wrap: wrap;
+	}
+}

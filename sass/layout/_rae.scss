@@ -2,8 +2,9 @@
 	//
 	margin-top: 8rem;
 
-	&__title {
-		//
+	&__title + p {
+		padding: 10rem;
+		text-align: center;
 	}
 
 	&__container {
@@ -17,18 +18,14 @@
 
 	&__item {
 		@include flex-center-vertical;
-		padding: 4rem 2rem;
-		flex: 0 1 40rem;
-		cursor: pointer;
+		flex: 0 1 25rem;
 
 		@include respond(tab-port) {
-			padding: 3rem 1rem;
-			flex: 0 1 35rem;
+			flex: 0 1 20rem;
 		}
 
 		@include respond(phone) {
-			padding: 2rem 1rem;
-			flex: 0 1 30rem;
+			flex: 0 1 15rem;
 		}
 
 		p {
