@@ -1,8 +1,33 @@
 .our-team {
+	background-color: $color-primary;
+	border-top-right-radius: 5rem;
+	border-top-left-radius: 5rem;
+
+	position: relative;
+
+	box-shadow: 4px -5px 12px 0px rgba(0, 0, 0, 0.71);
+	-webkit-box-shadow: 4px -5px 12px 0px rgba(0, 0, 0, 0.71);
+	-moz-box-shadow: 4px -5px 12px 0px rgba(0, 0, 0, 0.71);
+
+	box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.75);
+
+	&::before {
+		content: "V";
+		position: absolute;
+		top: -4%;
+		left: 50%;
+		background-color: $color-primary;
+		color: white;
+		padding: 1rem 3rem;
+		border-top-right-radius: 5rem;
+		border-top-left-radius: 5rem;
+	}
 	&__container {
 		@include flex-space-between;
 		flex-wrap: wrap;
-		padding: 10rem 5rem;
+		padding: 5rem;
 	}
 
 	&__member {
@@ -54,5 +79,9 @@
 
 	.btn-container {
 		@include flex-center;
+
+		.btn {
+			margin-bottom: 3rem;
+		}
 	}
 }

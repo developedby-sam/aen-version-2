@@ -30,6 +30,12 @@
 	height: 100px !important;
 }
 
+.section {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 html {
 	font-size: 62.5%;
 	box-sizing: border-box;
@@ -78,11 +84,40 @@ h4 {
 
 a {
 	text-decoration: none;
-	color: $gray-dark;
+	color: #f3f4f6;
 
 	&:hover {
 		text-decoration: none;
 		color: currentColor;
+	}
+}
+
+hr {
+	height: 1px;
+	background: white;
+	border: none;
+	outline: none;
+	margin: 0.5rem 48rem 3rem;
+	position: relative;
+
+	&:before {
+		content: attr(data-symbol);
+		position: absolute;
+		top: 0;
+		left: 50%;
+		background: $color-primary;
+		color: white;
+		padding: -0.5rem 1rem;
+		transform: translate(-50%, -50%);
+	}
+}
+
+hr#five {
+	&:before {
+		font-size: 2em;
+		padding: -0.5rem 1rem;
+		font-weight: lighter;
+		font-family: Helvetica Neue;
 	}
 }
 

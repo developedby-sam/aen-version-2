@@ -3,17 +3,31 @@
 	min-height: 10vh;
 	width: 100%;
 	margin: 0 auto;
-	padding: 2rem 5rem;
 
-	@include respond(tab-land) {
-		padding: 2rem 4rem;
+	.btn-container {
+		background: linear-gradient(
+				to right,
+				rgba(0, 0, 0, 0.9),
+				rgba(0, 0, 0, 0.9)
+			),
+			url("../../img/solar system.png");
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		.btn {
+			margin: 3rem 0rem;
+		}
 	}
 
-	@include respond(tab-port) {
-		padding: 1rem 3rem;
-	}
+	// @include respond(tab-land) {
+	// 	padding: 2rem 4rem;
+	// }
 
-	@include respond(phone) {
-		padding: 1rem 2rem;
-	}
+	// @include respond(tab-port) {
+	// 	padding: 1rem 3rem;
+	// }
+
+	// @include respond(phone) {
+	// 	padding: 1rem 2rem;
+	// }
 }

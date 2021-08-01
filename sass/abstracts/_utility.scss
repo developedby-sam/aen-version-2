@@ -4,6 +4,6 @@
 }
 
 .shadow-on {
-	background-color: $color-primary;
+	background-color: rgba($color-primary, 1) !important;
 	box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.8);
 }

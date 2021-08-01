@@ -91,11 +91,11 @@ loadAPOD();
 // Implementing increasing number animation for aen numbers
 // function
 function startNumberAnimation() {
-	numberIncreamentAnimation(volunteers, 0, 250, 5, 3000);
-	numberIncreamentAnimation(participants, 0, 10000, 500, 4000);
-	numberIncreamentAnimation(members, 0, 150, 5, 3000);
-	numberIncreamentAnimation(partners, 0, 20, 1, 2000);
-	numberIncreamentAnimation(colleges, 0, 40, 1, 2000);
+	numberIncreamentAnimation(volunteers, 0, 50, 2, 4000);
+	numberIncreamentAnimation(participants, 0, 10000, 200, 7000);
+	numberIncreamentAnimation(members, 0, 150, 5, 4000);
+	numberIncreamentAnimation(partners, 0, 20, 2, 4000);
+	numberIncreamentAnimation(colleges, 0, 40, 2, 4000);
 }
 
 // implementing section-reveal animation
@@ -126,7 +126,7 @@ const numbersScene = new ScrollMagic.Scene({
 	.addTo(controller);
 
 const navScene = new ScrollMagic.Scene({
-	triggerElement: ".header-slider",
+	triggerElement: ".slider__btn",
 	triggerHook: 0,
 })
 	.on("start", () => {
@@ -208,7 +208,7 @@ const slider = function () {
 
 	setInterval(function () {
 		nextSlide();
-	}, 3000);
+	}, 8000);
 
 	document.addEventListener("keydown", function (e) {
 		if (e.key === "ArrowLeft") prevSlide();
